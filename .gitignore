@@ -1,2 +1,2 @@
 supervisord.pid
-./idea
+.idea
