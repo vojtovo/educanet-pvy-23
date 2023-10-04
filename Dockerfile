@@ -32,6 +32,6 @@ COPY index.php /app/index.php
 
 WORKDIR /app
 
-EXPOSE 80
+EXPOSE 8000
 
 CMD ["bash", "/docker/start.sh"]
