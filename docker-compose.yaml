@@ -1,0 +1,7 @@
+services:
+  php:
+    image: registry.geekcoders.cz/vojtech.hutla/educanet-php/php:8.2
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/app
