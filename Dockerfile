@@ -26,12 +26,14 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 
 COPY --from=caddy /usr/bin/caddy /usr/bin/caddy
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
-COPY .docker /docker
-COPY .docker/fpm-pool.conf /etc/php/8.2/fpm/pool.d/www.conf
+
+COPY docker/fpm-pool.conf /etc/php/8.2/fpm/pool.d/www.conf
+COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY docker/Caddyfile /Caddyfile
 COPY index.php /app/index.php
 
 WORKDIR /app
 
 EXPOSE 8000
 
-CMD ["bash", "/docker/start.sh"]
+CMD ["supervisord", "-n"]
