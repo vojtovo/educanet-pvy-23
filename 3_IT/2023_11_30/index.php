@@ -115,6 +115,17 @@ final class Ctverec extends Tvar {
     {
         return $this->delkaStrany * $this->delkaStrany;
     }
+
+    /**
+     * Magická metoda __toString vrátí textovou reprezentaci objektu, když se jej
+     * budeme snažit přetypovat na string (např. při výpisu pomocí fce echo).
+     *
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return "Jsem čtverec, moje barva je {$this->barva} a obsah {$this->getObsah()} cm^2";
+    }
 }
 
 // Objekt vytvoříme pomocí klíčového slova new
@@ -136,3 +147,5 @@ function vypisBarvuTvaru(Tvar $tvar): void
 }
 vypisBarvuTvaru($kruznice);
 vypisBarvuTvaru($ctverec);
+
+echo $ctverec.PHP_EOL;
