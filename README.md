@@ -4,8 +4,11 @@
 # Stažení změn z repozitáře
 $ git pull
 
-# Spuštění projektu
+# Sestavení projektu
 $ docker compose up --build
+
+# Spuštění projektu
+$ docker compose up -d
 ```
 
 Formát adresy cvičení:

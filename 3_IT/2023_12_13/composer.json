@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mistic100/randomcolor": "^1.0",
+        "spatie/color": "^1.5"
+    }
+}

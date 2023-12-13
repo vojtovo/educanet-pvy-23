@@ -1,2 +1,3 @@
 supervisord.pid
 **/prac.php
+**/vendor/
