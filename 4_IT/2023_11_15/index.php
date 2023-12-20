@@ -41,7 +41,8 @@ echo pow(10, 3);
  * @param int $sazba
  * @return float
  */
-function cenaDPH(int|float $cenaBezDPH, int $sazba = 21): float {
+function cenaDPH(int|float $cenaBezDPH, int $sazba = 21): float
+{
     return $cenaBezDPH * (1 + ($sazba / 100));
 }
 

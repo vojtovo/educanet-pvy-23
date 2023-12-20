@@ -9,7 +9,8 @@
  * Tvar je abstraktní třída - lze ji rozšiřovat (dědit z ní), ale
  * nelze z ní vytvářet objekty.
  */
-abstract class Tvar {
+abstract class Tvar
+{
     /*
      * Atribut $barva je dostupný pouze uvnitř objektů vytvořených
      * z tříd dědících z třídy Tvar, nemůžeme jej měnit mimo objekt.
@@ -51,7 +52,8 @@ abstract class Tvar {
  * Třída Kruznice rozšiřuje třídu Tvar - přidává metody pro výpočet průměru
  * a obvodu kružníce
  */
-final class Kruznice extends Tvar {
+final class Kruznice extends Tvar
+{
     private float $polomer;
 
     public function getPolomer(): float
@@ -75,7 +77,8 @@ final class Kruznice extends Tvar {
     }
 }
 
-final class Ctverec extends Tvar {
+final class Ctverec extends Tvar
+{
     /**
      * V PHP 8 je možné zapsat atributy s jejich viditelností přímo do konstuktoru
      * a kód tak zpřehlednit - atribut delkaStrany je implementován právě tímto
@@ -85,7 +88,7 @@ final class Ctverec extends Tvar {
      * @param float $delkaStrany
      */
     public function __construct(
-        string $barva,
+        string        $barva,
         private float $delkaStrany
     )
     {
@@ -143,9 +146,10 @@ echo "Obsah čtverce: {$ctverec->getObsah()}\n";
 // polymorfismu
 function vypisBarvuTvaru(Tvar $tvar): void
 {
-    echo $tvar->getBarva().PHP_EOL;
+    echo $tvar->getBarva() . PHP_EOL;
 }
+
 vypisBarvuTvaru($kruznice);
 vypisBarvuTvaru($ctverec);
 
-echo $ctverec.PHP_EOL;
+echo $ctverec . PHP_EOL;

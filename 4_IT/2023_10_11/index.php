@@ -12,8 +12,8 @@ $desetinneCislo = 3.14;
 // typu před hodnotu. Pozor, ne všechny typy lze typovat mezi sebou,
 // u některých může dojít k nečekanému chování - např. příklad
 // níže "zahodí" desetinnou část, kterou už nelze zpětně získat.
-$celeCislo = (int) $desetinneCislo;
-$desetinneCislo2 = (float) $celeCislo; // 3.0
+$celeCislo = (int)$desetinneCislo;
+$desetinneCislo2 = (float)$celeCislo; // 3.0
 
 // -----------------------------------------------------------------
 // Funkce pro výpis

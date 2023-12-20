@@ -6,11 +6,13 @@
  * @param int $sazba
  * @return float
  */
-function cenaDPH(int|float $cenaBezDPH, int $sazba = 21): float {
+function cenaDPH(int|float $cenaBezDPH, int $sazba = 21): float
+{
     return $cenaBezDPH * (1 + ($sazba / 100));
 }
 
-function sachovnice(int $velikost = 8): string {
+function sachovnice(int $velikost = 8): string
+{
     $buffer = "<table>";
     for ($i = 0; $i < $velikost; $i++) {
         $buffer .= "<tr>";
