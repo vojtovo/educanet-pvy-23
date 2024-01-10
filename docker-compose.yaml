@@ -5,3 +5,18 @@ services:
       - 8000:8000
     volumes:
       - ./:/app
+  mariadb:
+    image: mariadb:latest
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: secret
+    volumes:
+      - db:/var/lib/mysql:Z
+  adminer:
+    image: adminer:latest
+    ports:
+      - 13306:8080
+
+volumes:
+  db:

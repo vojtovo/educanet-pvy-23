@@ -11,7 +11,8 @@ $ docker compose up --build
 $ docker compose up -d
 ```
 
-Formát adresy cvičení:
+## Formát adresy cvičení:
+
 ```
 http://localhost:8000/[trida]/[YYYY]_[MM]_[DD]/
 ```
@@ -19,4 +20,15 @@ http://localhost:8000/[trida]/[YYYY]_[MM]_[DD]/
 Např:
 http://localhost:8000/3_IT/2023_11_01/
 http://localhost:8000/4_IT/2023_10_11/
+```
+
+## Přístup k databázovému serveru:
+
+Formát adresy cvičení:
+```
+http://localhost:13306/
+
+Adresa serveru: mariadb
+Jméno:          root
+Heslo:          secret
 ```
