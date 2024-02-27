@@ -4,7 +4,9 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./:/app
+      - ./:/app/public
+    environment:
+        - "SERVER_NAME=:8000"
   mariadb:
     image: mariadb:latest
     ports:
